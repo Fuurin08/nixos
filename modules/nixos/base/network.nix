@@ -22,10 +22,14 @@
   # https://man.archlinux.org/man/systemd.network.5
   systemd.network.networks = {
     "10-eth0" = {
-      matchConfig.Name = [
-        "en*"
-        "eth*"
-      ];
+      #matchConfig.Name = [
+      #  "en*"
+      #  "eth*"
+      #];
+      matchConfig = {
+        kind = "!*";
+        Type = "ether";
+      };
       DHCP = "yes";
       dhcpV4Config.RouteMetric = 128;
       dhcpV6Config.RouteMetric = 128;

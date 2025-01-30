@@ -8,6 +8,8 @@
     "ntp.tencent.com" # Tencent NTP Server
   ];
 
+  i18n.inputMethod.fcitx5.waylandFrontend = true;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
